@@ -1,36 +1,29 @@
-# leetcode-solutions
-A collection of LeetCode questions to ace the coding interview! - Created using [LeetHub v2](https://github.com/arunbhardwaj/LeetHub-2.0)
+Здравствуйте, давайте сразу преступим к делу. Только одно хотел бы сказать, чуть не понял правила надо по 5 каждого типа или любые 5. 
 
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## String
-|  |
-| ------- |
-| [0006-zigzag-conversion](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0006-zigzag-conversion) |
-| [0008-string-to-integer-atoi](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0008-string-to-integer-atoi) |
-## Math
-|  |
-| ------- |
-| [0002-add-two-numbers](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0002-add-two-numbers) |
-| [0007-reverse-integer](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0007-reverse-integer) |
-## Linked List
-|  |
-| ------- |
-| [0002-add-two-numbers](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0002-add-two-numbers) |
-## Recursion
-|  |
-| ------- |
-| [0002-add-two-numbers](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0002-add-two-numbers) |
-## Array
-|  |
-| ------- |
-| [0011-container-with-most-water](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0011-container-with-most-water) |
-## Two Pointers
-|  |
-| ------- |
-| [0011-container-with-most-water](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0011-container-with-most-water) |
-## Greedy
-|  |
-| ------- |
-| [0011-container-with-most-water](https://github.com/cpp-skulBoY/leetcode-solutions/tree/master/0011-container-with-most-water) |
-<!---LeetCode Topics End-->
+
+
+0002:
+  Довольно простая задача единственная, которую я решил задолго до того, как решил у вас поучиться.
+  1) создаем указатель на то, что мы будем возвращать и указатель которым будем создавать новые ноды, а также переменную в которой храним остаток от сложения.
+  2) в цикле идем, пока осталась хоть одна нода или остаток.
+  3) приравниваем к сумме остаток, добавляем к сумме ноды(если остались) и кидаем в новую ноду ее остаток от деления на 10, переносим /10
+  Сложнее синтаксис, вот эти ->;
+
+0006:
+  Крутая задача, с прикольной идеей
+  пока у нас осталась строка раскидываем из нее чары по векторам, чтобы перейти от одного вектора к другому добавляем к i count, когда дошли до конца или 0 меняем знак count, после просто складываем строки;
+0007:
+  Не придумал, как сделать без long long, но в общем идея такая: преобразуем в строку, если число меньше 0 реверсим от 1 чара до последнего, если больше или равно 0 реверсим всю строку, после переводим в лонг лонго проверяем влезет ли в инт и возвращаем 0, если нет, иначе наш лонг лонг;
+0008:
+  1)Пропуское все пустые строки
+  2) проверяем - или+ пропускаем их тоже
+  3)удаляем все 0
+  4)если ничего не осталось или встретили первой букву возвразаем 0
+  5)удаляем все что начнется после первой нецифры
+  6)проверяем влазит вообще в инт или нет, сначала количество разрядов, после если число из 10 цифр по разрядно
+  7)после всего этого собираем наше число по разрядно
+  8)не придумал как победить крайний случай min int без донг лонг, поэтому long long x
+0011:
+  простая задача на 2 указателя
+  1)считаем начальную площадь, говорим,что она лучшая
+  2)двигаем меньшую стенку считаем новую площадь, сравниваем ее с лучшей
